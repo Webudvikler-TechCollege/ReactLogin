@@ -48,7 +48,7 @@ const Post = () => {
 				<input type="hidden" value="1" {...register('event_id')} />
 				<div>
 					<label htmlFor="firstname">Fornavn:</label>
-					<input {...register('firstname', 
+					<input id="firstname" {...register('firstname', 
 							{ 
 								required: 'Du skal indtaste dit fornavn', 
 								pattern: { 
@@ -61,7 +61,7 @@ const Post = () => {
 
 				<div>
 					<label htmlFor="lastname">Efternavn:</label>
-					<input {...register('lastname', 
+					<input id="lastname" {...register('lastname', 
 							{ 
 								required: 'Du skal indtaste dit efternavn', 
 								pattern: { 
@@ -74,7 +74,7 @@ const Post = () => {
 
 				<div>
 					<label htmlFor="address">Adresse:</label>
-					<input {...register('address', 
+					<input id="address" {...register('address', 
 							{ 
 								required: 'Du skal indtaste din adresse'
 							})} />
@@ -83,7 +83,7 @@ const Post = () => {
 
 				<div>
 					<label htmlFor="zipcode">Postnummer:</label>
-					<input {...register('zipcode', 
+					<input id="zipcode" {...register('zipcode', 
 							{ 
 								required: 'Du skal indtaste dit postnummer',
 								pattern: { 
@@ -105,7 +105,7 @@ const Post = () => {
 
 				<div>
 					<label htmlFor="city">By:</label>
-					<input {...register('city', 
+					<input id="city" {...register('city', 
 							{ 
 								required: 'Du skal indtaste et bynavn'
 							})} />
@@ -114,7 +114,7 @@ const Post = () => {
 
 				<div>
 					<label htmlFor="email">Email:</label>
-					<input {...register('email', 
+					<input id="email" {...register('email', 
 							{ 
 								required: 'Du skal indtaste din email',
 								pattern: { 
