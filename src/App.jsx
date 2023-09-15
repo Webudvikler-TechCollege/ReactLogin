@@ -14,7 +14,7 @@ function App() {
           <ul>
             <li><Link to="/">Forside</Link></li>
             <li><Link to="/login">Login</Link></li>
-            <li><Link to="/post">Post</Link></li>
+            <li><Link to="/post/1">Post</Link></li>
           </ul>
         </nav>
       </header>

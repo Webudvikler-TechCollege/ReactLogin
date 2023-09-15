@@ -8,7 +8,7 @@ const AppRouter = () => {
 		<Routes>
 			<Route index element={<Home />} />
 			<Route path="/login" element={<Login />} />
-			<Route path="/post" element={<Post />} />
+			<Route path="/post/:event_id" element={<Post />} />
 		</Routes>
 	)
 }

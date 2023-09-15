@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useForm } from "react-hook-form"
 import { useAuth } from "../Providers/AuthProvider"
+import { useParams } from "react-router-dom"
 
 /**
  * Post Component
@@ -9,12 +10,13 @@ import { useAuth } from "../Providers/AuthProvider"
 const Post = () => {
 	const { loginData } = useAuth()
 	const { register, handleSubmit, formState: { errors } } = useForm()
+	const { event_id } = useParams()
 
 	const formSubmit = async formObject => {
 		const api_endpoint = 'http://localhost:3000/reservations'
 
 		const formData = new URLSearchParams()
-		formData.append('event_id', formObject.event_id)
+		formData.append('event_id', event_id)
 		formData.append('firstname', formObject.firstname)
 		formData.append('lastname', formObject.lastname)
 		formData.append('address', formObject.address)
@@ -24,7 +26,7 @@ const Post = () => {
 		formData.append('seats[0]', 1)
 		formData.append('seats[1]', 2)
 
-		console.log(...formData);
+		//console.log(...formData);
 
 		const options = {
 			headers: {
@@ -45,7 +47,6 @@ const Post = () => {
 	return (
 		<div>
 			<form onSubmit={handleSubmit(formSubmit)}>
-				<input type="hidden" value="1" {...register('event_id')} />
 				<div>
 					<label htmlFor="firstname">Fornavn:</label>
 					<input id="firstname" {...register('firstname', 
