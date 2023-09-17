@@ -23,6 +23,7 @@ const Post = () => {
 		formData.append('zipcode', formObject.zipcode)
 		formData.append('city', formObject.city)
 		formData.append('email', formObject.email)
+		formData.append('email', formObject.email)
 		formData.append('seats[0]', 1)
 		formData.append('seats[1]', 2)
 
